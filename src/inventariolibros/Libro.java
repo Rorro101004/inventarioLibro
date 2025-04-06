@@ -69,8 +69,7 @@ public class Libro {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.autor);
+        int hash = 5;
         hash = 23 * hash + Objects.hashCode(this.ISBN);
         return hash;
     }
@@ -87,11 +86,10 @@ public class Libro {
             return false;
         }
         final Libro other = (Libro) obj;
-        if (!Objects.equals(this.autor, other.autor)) {
-            return false;
-        }
         return Objects.equals(this.ISBN, other.ISBN);
     }
+
+ 
 
 
 

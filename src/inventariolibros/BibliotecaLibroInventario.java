@@ -103,6 +103,7 @@ public class BibliotecaLibroInventario {
             libroActualizar.setAutor(autor);
             libroActualizar.setCantidadInventario(cantidadInventario);
             libroActualizar.setPrecio(precio);
+            registroLibros.put(libroActualizar, libroActualizar.toString());
             actualizarLibroRegistro();
             return true;
         } else {
@@ -140,7 +141,7 @@ public class BibliotecaLibroInventario {
     public static void eliminarLibro(Libro libro_temporal) {
         inventario.remove(libro_temporal.getISBN());
         registroLibros.remove(libro_temporal);
-        actualizarLibroRegistro();
+        actualizarLibroRegistro();                                                          
     }
 
     public static boolean existeLibro(String ISBN) {
